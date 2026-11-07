@@ -13,31 +13,36 @@
     <!-- Azure Speech SDK oficial -->
     <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
     <style>
+        /* Configurações gerais */
         * {
             font-family: "Comic Sans MS", sans-serif;
             font-weight: bold;
         }
         body {
-            background-color: #eeeeee;
+            background-color: #160020;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
+        /* Card principal */
         .main-card {
             width: 100%;
             max-width: 650px;
-            background-color: white;
+            background-color: #280137;
+            border: 1px solid #4b1760;
             border-radius: 18px;
             padding: 35px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
         }
+        /* Título */
         h1 {
-            color: #b00b69;
+            color: #e5b3ff;
             text-align: center;
             margin-bottom: 30px;
         }
+        /* Indicador de status */
         .status-container {
             display: flex;
             align-items: center;
@@ -48,55 +53,71 @@
         .status-circle {
             width: 16px;
             height: 16px;
-            background-color: #dc3545;
+            background-color: #a83250;
             border-radius: 50%;
             transition: background-color 0.3s;
         }
         .status-circle.listening {
-            background-color: #198754;
-            box-shadow: 0 0 10px #198754;
+            background-color: #35d07f;
+            box-shadow: 0 0 12px #35d07f;
         }
         #statusText {
             font-size: 17px;
-            color: #555;
+            color: #e5d5ed;
         }
+        /* Textarea */
         textarea {
             resize: vertical;
             min-height: 220px;
             border-radius: 10px !important;
+            background-color: #190024 !important;
+            color: #ffffff !important;
+            border: 1px solid #603477 !important;
+        }
+        textarea::placeholder {
+            color: #a98bb5;
         }
         textarea:focus {
             border-color: #b00b69 !important;
-            box-shadow: 0 0 0 0.2rem rgba(176, 11, 105, 0.15) !important;
+            box-shadow: 0 0 0 0.2rem rgba(176, 11, 105, 0.25) !important;
         }
+        /* Labels */
+        .form-label {
+            color: #e5d5ed;
+        }
+        /* Botão iniciar */
         .btn-start {
             background-color: #b00b69;
             color: white;
             border: none;
         }
         .btn-start:hover {
-            background-color: #880852;
+            background-color: #d51b87;
             color: white;
         }
+        /* Botão parar */
         .btn-stop {
-            background-color: #dc3545;
+            background-color: #59206e;
             color: white;
             border: none;
         }
         .btn-stop:hover {
-            background-color: #bb2d3b;
+            background-color: #75308e;
             color: white;
         }
+        /* Botões desabilitados */
         .btn:disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: not-allowed;
         }
+        /* Texto inferior */
         .info {
-            color: #777;
+            color: #a98bb5;
             font-size: 13px;
             text-align: center;
             margin-top: 20px;
         }
+        /* Responsividade */
         @media (max-width: 576px) {
             .main-card {
                 padding: 22px;
